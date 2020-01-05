@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_user_headerbar_textview"
                 android:fontFamily="sans-serif"
-                app:layout_flexBasisPercent="40%"
+                app:layout_flexBasisPercent="43%"
                 android:text="Inventory"
                 android:textAllCaps="false"
                 android:textColor="#0078ff"
@@ -53,14 +53,14 @@
                 android:drawableTop="@drawable/icon_inventory"
                 android:padding="20dp"
                 android:drawablePadding="15dp"
-                android:layout_margin="15dp"/>
+                android:layout_margin="10dp"/>
             <Button
                 android:id="@+id/paymentsBtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_user_headerbar_textview"
                 android:fontFamily="sans-serif"
-                app:layout_flexBasisPercent="40%"
+                app:layout_flexBasisPercent="43%"
                 android:text="Payments"
                 android:textAllCaps="false"
                 android:textColor="#0078ff"
@@ -68,14 +68,14 @@
                 android:drawableTop="@drawable/icon_payment"
                 android:padding="20dp"
                 android:drawablePadding="15dp" 
-                android:layout_margin="15dp"/>
+                android:layout_margin="10dp"/>
             <Button
                 android:id="@+id/ordersBtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_user_headerbar_textview"
                 android:fontFamily="sans-serif"
-                app:layout_flexBasisPercent="40%"
+                app:layout_flexBasisPercent="43%"
                 android:text="Orders"
                 android:textAllCaps="false"
                 android:textColor="#0078ff"
@@ -83,14 +83,14 @@
                 android:drawableTop="@drawable/icon_order"
                 android:padding="20dp"
                 android:drawablePadding="15dp" 
-                android:layout_margin="15dp"/>
+                android:layout_margin="10dp"/>
         <Button
                 android:id="@+id/reportsBtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_user_headerbar_textview"
                 android:fontFamily="sans-serif"
-                app:layout_flexBasisPercent="40%"
+                app:layout_flexBasisPercent="43%"
                 android:text="Reports"
                 android:textAllCaps="false"
                 android:textColor="#0078ff"
@@ -98,6 +98,6 @@
                 android:drawableTop="@drawable/icon_report"
                 android:padding="20dp"
                 android:drawablePadding="15dp" 
-                android:layout_margin="15dp"/>
+                android:layout_margin="10dp"/>
         </com.google.android.flexbox.FlexboxLayout>
     </android.support.constraint.ConstraintLayout>
