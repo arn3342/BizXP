@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:layout_marginTop="2dp"
+        android:background="#fff">
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_weight="0.7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="New Product 1"
+            android:textSize="22dp"/>
+        <View
+            android:id="@+id/nameSeperator"
+            android:layout_width="50dp"
+            android:layout_height="3dp"
+            app:layout_constraintTop_toBottomOf="@id/productName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_user_headerbar_textview_blue"/>
+        <TextView
+            android:id="@+id/productQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_weight="0.3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="0"
+            android:textSize="22dp"/>
+        <TextView
+            android:id="@+id/buyingPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/nameSeperator"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:text="Buying price (unit) : 0৳"/>
+        <TextView
+            android:id="@+id/sellingPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/buyingPrice"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:text="Selling price (unit) : 0৳"/>
+</android.support.constraint.ConstraintLayout>
