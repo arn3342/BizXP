@@ -6,13 +6,16 @@ using Android.Widget;
 using Android.Content.PM;
 using Android.Content;
 using Android.Support.Constraints;
+using System;
+using BizXP_App.CustomViews;
+using BizXP_App.Models;
 
 namespace BizXP_App.Activities
 {
     [Activity(Label = "@string/app_name", MainLauncher = true, Theme = "@style/Theme.AppBlueTheme", WindowSoftInputMode = Android.Views.SoftInput.AdjustPan, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity
     {
-        private ConstraintLayout inventoryBtn, orderBtn;
+        private LinearLayout homeButtonContainer;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -20,11 +23,25 @@ namespace BizXP_App.Activities
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-            inventoryBtn = FindViewById<ConstraintLayout>(Resource.Id.inventoryBtn);
-            orderBtn = FindViewById<ConstraintLayout>(Resource.Id.orderBtn);
+            homeButtonContainer = this.FindViewById<LinearLayout>(Resource.Id.homeButtonContainer);
+            GenerateMenuButtons();
+        }
 
-            orderBtn.Click += OrderBtn_Click;
-            inventoryBtn.Click += InventoryBtn_Click;
+        private void GenerateMenuButtons()
+        {
+            HomeButtonModel[] homeButtons = new HomeButtonModel[] 
+            {
+                new HomeButtonModel( ){ drawable =  Resource.Drawable.inventory_icon, title = "Inventory", desc = "Manage your products &amp; stocks" },
+                new HomeButtonModel( ){ drawable =  Resource.Drawable.taka_green, title = "Orders &amp; Payments", desc = "Manage your orders &amp; payments" },
+                new HomeButtonModel( ){ drawable =  Resource.Drawable.client_icon_blue, title = "Clients &amp; customers", desc = "Manage your beloved clients" },
+            };
+
+            for (int i=0; i < homeButtons.Length; i++)
+            {
+                HomeButton btn = new HomeButton(this);
+                btn.SetContents(homeButtons[i]);
+                homeButtonContainer.AddView(btn);
+            }
         }
 
         private void OrderBtn_Click(object sender, System.EventArgs e)
@@ -46,5 +63,7 @@ namespace BizXP_App.Activities
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+        
+        
     }
 }
