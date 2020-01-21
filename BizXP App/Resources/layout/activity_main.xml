@@ -14,7 +14,7 @@
             android:orientation="horizontal"
             android:paddingTop="18dp"
             android:paddingBottom="18dp"
-            android:background="@drawable/bg_onlybottomshadow"
+            android:background="#fff"
             android:paddingLeft="10dp"
             android:gravity="center_vertical">
             <ImageView

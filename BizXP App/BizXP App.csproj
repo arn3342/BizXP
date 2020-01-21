@@ -60,6 +60,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\OrderActivity.cs" />
     <Compile Include="Activities\InventoryActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -214,6 +215,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\customview_product.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_order.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
