@@ -43,7 +43,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="5dp"
             android:textSize="18dp"
-            android:text="Buying price (unit) : 0৳"/>
+            android:text="Buying price (unit) : "/>
         <TextView
             android:id="@+id/sellingPrice"
             android:layout_width="wrap_content"
@@ -52,5 +52,14 @@
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="5dp"
             android:textSize="18dp"
-            android:text="Selling price (unit) : 0৳"/>
+            android:text="Selling price (unit) : "/>
+        <TextView
+            android:id="@+id/stockAddedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/sellingPrice"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:text="Stock added: "/>
 </android.support.constraint.ConstraintLayout>

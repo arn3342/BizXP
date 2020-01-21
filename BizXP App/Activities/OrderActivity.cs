@@ -12,14 +12,14 @@ using Android.Widget;
 
 namespace BizXP_App.Activities
 {
-    [Activity(Label = "InventoryActivity")]
+    [Activity(Label = "Orders")]
     public class OrderActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.activity_order);
+            SetContentView(Resource.Layout.activity_orders);
         }
     }
 }
