@@ -1,0 +1,268 @@
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ebebeb"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:padding="15dp"
+        android:text="All orders"
+        android:textSize="22dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/totalContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/Header">
+
+        <TextView
+            android:id="@+id/startDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:background="@drawable/bg_user_headerbar_textview"
+            android:lineSpacingMultiplier="1.3"
+            android:padding="15dp"
+            android:text="Start date\n1-18-2020"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/endDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight=".5"
+            android:background="@drawable/bg_user_headerbar_textview"
+            android:lineSpacingMultiplier="1.3"
+            android:padding="15dp"
+            android:text="End date\n1-18-2020"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/totalContainer"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_user_headerbar_textview"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/buyerName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Md. Maruf Islam"
+                    android:textSize="22dp"
+                    app:layout_constraintHorizontal_weight="0.7"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/orderDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="1/18/2020"
+                    android:textSize="20dp"
+                    app:layout_constraintHorizontal_weight="0.7"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/nameSeperator"
+                    android:layout_width="50dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_user_headerbar_textview_blue"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/buyerName" />
+
+                <TextView
+                    android:id="@+id/productQty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="2 (pc)s\n5(pc)s"
+                    android:gravity="right"
+                    android:textSize="18dp"
+                    android:lineSpacingMultiplier="1.5"
+                    app:layout_constraintHorizontal_weight="0.3"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/nameSeperator" />
+
+                <TextView
+                    android:id="@+id/product1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Maxima battery"
+                    android:textSize="18dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/nameSeperator" />
+
+                <TextView
+                    android:id="@+id/product2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Passenger Battery"
+                    android:textSize="18dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/product1" />
+
+                <View
+                    android:id="@+id/productSeperator"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#dedede"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/product2" />
+
+                <TextView
+                    android:id="@+id/stockAddedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Paid: \nDue:"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productSeperator" />
+
+                <TextView
+                    android:id="@+id/paidDuePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="right"
+                    android:text="15,000\n5,000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productSeperator" />
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_user_headerbar_textview"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/buyerName1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Aousaf Rashid"
+                    android:textSize="22dp"
+                    app:layout_constraintHorizontal_weight="0.7"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/orderDate1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="1/18/2020"
+                    android:textSize="20dp"
+                    app:layout_constraintHorizontal_weight="0.7"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/nameSeperator1"
+                    android:layout_width="50dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_user_headerbar_textview_blue"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/buyerName1" />
+
+                <TextView
+                    android:id="@+id/productQt1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="3 (pc)s"
+                    android:gravity="right"
+                    android:textSize="18dp"
+                    android:lineSpacingMultiplier="1.5"
+                    app:layout_constraintHorizontal_weight="0.3"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/nameSeperator1" />
+
+                <TextView
+                    android:id="@+id/product11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Passenger Battery"
+                    android:textSize="18dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/nameSeperator1" />
+
+                <View
+                    android:id="@+id/productSeperator1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#dedede"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/product11" />
+
+                <TextView
+                    android:id="@+id/stockAddedDate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Paid: \nDue:"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productSeperator1" />
+
+                <TextView
+                    android:id="@+id/paidDuePrice1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="right"
+                    android:text="10,000\n0"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productSeperator1" />
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp"
+        android:src="@drawable/plus_icon"/>
+</android.support.constraint.ConstraintLayout>
