@@ -28,7 +28,7 @@ namespace BizXP_App.Activities
         }
 
         private void GenerateMenuButtons()
-        {
+        { 
             HomeButtonModel[] homeButtons = new HomeButtonModel[] 
             {
                 new HomeButtonModel( ){ drawable =  Resource.Drawable.inventory_icon, title = "Inventory", desc = "Manage your products &amp; stocks" },
