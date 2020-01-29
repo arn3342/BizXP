@@ -69,8 +69,6 @@
     <Compile Include="Activities\InventoryActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Adapters\InventoryAdapter.cs" />
-    <Compile Include="CustomViews\HomeButton.cs" />
-    <Compile Include="Models\HomeButtonModel.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,8 +108,8 @@
     <AndroidResource Include="Resources\drawable\bg_onlybottomshadow.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Naxam.Flexbox.Droid">
-      <Version>0.3.1</Version>
+    <PackageReference Include="FlexboxLayoutXamarinBindingAndroid">
+      <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Arch.Core.Common">
       <Version>1.1.1.3</Version>
@@ -203,9 +201,6 @@
     <AndroidResource Include="Resources\drawable\icon_payment.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\inventoryicon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\paymentIcon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -275,6 +270,38 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\downArrow_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\menu_icon_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CustomViews\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\client_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\dimens.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_client.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bg_button_shadow_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\payment_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\nav_menu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\toolbar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\nav_header.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

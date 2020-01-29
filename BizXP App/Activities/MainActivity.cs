@@ -7,7 +7,6 @@ using Android.Content.PM;
 using Android.Content;
 using Android.Support.Constraints;
 using System;
-using BizXP_App.CustomViews;
 using BizXP_App.Models;
 
 namespace BizXP_App.Activities
@@ -23,27 +22,9 @@ namespace BizXP_App.Activities
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-            homeButtonContainer = this.FindViewById<LinearLayout>(Resource.Id.homeButtonContainer);
-            GenerateMenuButtons();
+            //homeButtonContainer = this.FindViewById<LinearLayout>(Resource.Id.homeButtonContainer);
+            //GenerateMenuButtons();
         }
-
-        private void GenerateMenuButtons()
-        { 
-            HomeButtonModel[] homeButtons = new HomeButtonModel[] 
-            {
-                new HomeButtonModel( ){ drawable =  Resource.Drawable.inventory_icon, title = "Inventory", desc = "Manage your products &amp; stocks" },
-                new HomeButtonModel( ){ drawable =  Resource.Drawable.taka_green, title = "Orders &amp; Payments", desc = "Manage your orders &amp; payments" },
-                new HomeButtonModel( ){ drawable =  Resource.Drawable.client_icon_blue, title = "Clients &amp; customers", desc = "Manage your beloved clients" },
-            };
-
-            for (int i=0; i < homeButtons.Length; i++)
-            {
-                HomeButton btn = new HomeButton(this);
-                btn.SetContents(homeButtons[i]);
-                homeButtonContainer.AddView(btn);
-            }
-        }
-
         private void OrderBtn_Click(object sender, System.EventArgs e)
         {
             Intent inventoryIntent = new Intent(this, typeof(OrderActivity));

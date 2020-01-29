@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <group android:checkableBehavior="single">
+    <item android:id="@+id/nav_dashboard" android:title="Dashboard" />
+    <item android:id="@+id/nav_myShops" android:title="My shops" />
+    <item android:id="@+id/nav_products" android:title="Products" />
+    <item android:id="@+id/nav_inventory" android:title="Inventory" />
+    <item android:id="@+id/nav_ordersPayments" android:title="Order &amp; Payemtns" />
+    <item android:id="@+id/nav_clients" android:title="Clients" />
+  </group>
+  <!--<item android:title="Sub items">
+    <menu>
+      <item android:icon="@drawable/ic_dashboard" android:title="Sub item 1" />
+      <item android:icon="@drawable/ic_forum" android:title="Sub item 2" />
+      <item android:icon="@drawable/ic_done" android:title="Sub item 5" />
+    </menu>
+  </item>-->
+</menu>

@@ -2,9 +2,9 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:drawable="@drawable/orderIcon"
+        android:drawable="@drawable/cart_blue"
         android:width="35dp"
-        android:height="30dp"
+        android:height="35dp"
         />
 
 </layer-list >
