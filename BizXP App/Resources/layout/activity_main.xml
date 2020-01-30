@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-    <android.support.v4.widget.DrawerLayout
+         <android.support.v4.widget.DrawerLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/drawer_layout"
         android:layout_height="match_parent"
@@ -27,4 +27,281 @@
             android:fitsSystemWindows="true"
             app:headerLayout="@layout/nav_header" />
     </android.support.v4.widget.DrawerLayout>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7ff">
+       
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.constraint.ConstraintLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/startDateBtn"
+                    android:layout_width="0dp"
+                    card_view:layout_constraintRight_toLeftOf="@+id/endDateBtn"
+                    card_view:layout_constraintLeft_toLeftOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardBackgroundColor="@android:color/white"
+                    card_view:cardElevation="1.4dp"
+                    card_view:cardUseCompatPadding="true"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginRight="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start date"
+                            android:paddingLeft="20dp"
+                            android:textSize="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="16dp"
+                            android:textStyle="bold"
+                            android:textColor="#3896ff"/>
+                        <TextView
+                            android:id="@+id/startDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30 Jan,"
+                            android:paddingLeft="20dp"
+                            android:textSize="20dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="5dp"
+                            android:paddingRight="16dp"
+                            android:textColor="#3896ff"/>
+                        <TextView
+                            android:id="@+id/startYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2020"
+                            android:paddingLeft="17dp"
+                            android:textSize="20dp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="16dp"
+                            android:textColor="#3896ff"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/endDateBtn"
+                    android:layout_width="0dp"
+                    card_view:layout_constraintTop_toTopOf="parent"
+                    card_view:layout_constraintRight_toRightOf="parent"
+                    card_view:layout_constraintLeft_toRightOf="@id/startDateBtn"
+                    android:layout_height="wrap_content"
+                    card_view:cardBackgroundColor="@android:color/white"
+                    card_view:cardElevation="1.4dp"
+                    card_view:cardUseCompatPadding="true"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginLeft="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="End date"
+                            android:paddingLeft="20dp"
+                            android:textSize="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="16dp"
+                            android:textStyle="bold"
+                            android:textColor="#3896ff"/>
+                        <TextView
+                            android:id="@+id/endDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30 Jan,"
+                            android:paddingLeft="20dp"
+                            android:textSize="20dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="5dp"
+                            android:paddingRight="16dp"
+                            android:textColor="#3896ff"/>
+                        <TextView
+                            android:id="@+id/endYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2020"
+                            android:paddingLeft="17dp"
+                            android:textSize="20dp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="16dp"
+                            android:textColor="#3896ff"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </android.support.constraint.ConstraintLayout>
+
+            <!--Total sales starts here-->
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                card_view:layout_constraintRight_toLeftOf="@id/endDateBtn"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="#1990ff"
+                card_view:cardElevation="0.5sp"
+                card_view:cardUseCompatPadding="true"
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total sales"
+                        android:textSize="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="16dp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:id="@+id/totalSaleCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50,000 BDT"
+                        android:textSize="25dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="16dp"
+                        android:textStyle="bold"
+                        android:textColor="#fff"/>
+                    <Button
+                        android:id="@+id/showAllOrdersBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:text="Show Orders"
+                        android:paddingLeft="17dp"
+                        android:textSize="20dp"
+                        android:padding="10dp"
+                        android:textColor="#1990ff"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/bg_user_headerbar_textview"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Total profit starts here -->
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                card_view:layout_constraintRight_toLeftOf="@id/endDateBtn"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="#1990ff"
+                card_view:cardElevation="0.5sp"
+                card_view:cardUseCompatPadding="true"
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total profit"
+                        android:textSize="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="16dp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:id="@+id/totalProfitCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50,000 BDT"
+                        android:textSize="25dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="16dp"
+                        android:textStyle="bold"
+                        android:textColor="#fff"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Total due starts here -->
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                card_view:layout_constraintRight_toLeftOf="@id/endDateBtn"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="#ff3b3b"
+                card_view:cardElevation="0.5sp"
+                card_view:cardUseCompatPadding="true"
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total due"
+                        android:textSize="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="16dp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:id="@+id/totalDueCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50,000 BDT"
+                        android:textSize="25dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="16dp"
+                        android:textStyle="bold"
+                        android:textColor="#fff"/>
+                    <Button
+                        android:id="@+id/showDuePaymentBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:text="Show due payments"
+                        android:paddingLeft="17dp"
+                        android:textSize="20dp"
+                        android:padding="10dp"
+                        android:textColor="#ff3b3b"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/bg_user_headerbar_textview"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
