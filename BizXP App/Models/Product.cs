@@ -9,6 +9,6 @@ namespace BizXP_App.Models
         public string BuyingPrice { get; set; }
         public string SellingPrice { get; set; }
         public DateTime StockAdded { get; set; }
-
+        public string test { get; set; }
     }
 }
